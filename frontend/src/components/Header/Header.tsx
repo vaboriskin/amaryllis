@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import './Header.css'
 
 const Header: React.FC = () => {
@@ -8,6 +8,7 @@ const Header: React.FC = () => {
   const contactsRef = useRef<HTMLDivElement>(null)
   const menuRef = useRef<HTMLDivElement>(null)
   const menuToggleRef = useRef<HTMLButtonElement>(null)
+  const navigate = useNavigate()
 
   const whatsappNumber = '79963600436' // +7 (996) 360-04-36
   const whatsappMessage = encodeURIComponent('Здравствуйте! Хочу записаться на прием.')
@@ -47,8 +48,6 @@ const Header: React.FC = () => {
           <Link to="/">Главная</Link>
           <Link to="/services">Услуги</Link>
           <Link to="/doctors">Врачи</Link>
-          <Link to="/patients">Пациентам</Link>
-          <Link to="/appointment">Запись на прием</Link>
           <Link to="/contacts">Контакты</Link>
         </nav>
         <div className="header-actions">
@@ -125,6 +124,15 @@ const Header: React.FC = () => {
           )}
           </div>
           
+          <button
+            className="accessibility-toggle-header"
+            onClick={() => navigate('/accessibility')}
+            aria-label="Версия для слабовидящих"
+            title="Версия для слабовидящих"
+          >
+            <span className="accessibility-icon-header">🕶️</span>
+          </button>
+          
           <button 
             ref={menuToggleRef}
             className="menu-toggle"
@@ -145,8 +153,6 @@ const Header: React.FC = () => {
             <Link to="/" onClick={() => setIsMenuOpen(false)}>Главная</Link>
             <Link to="/services" onClick={() => setIsMenuOpen(false)}>Услуги</Link>
             <Link to="/doctors" onClick={() => setIsMenuOpen(false)}>Врачи</Link>
-            <Link to="/patients" onClick={() => setIsMenuOpen(false)}>Пациентам</Link>
-            <Link to="/appointment" onClick={() => setIsMenuOpen(false)}>Запись на прием</Link>
             <Link to="/contacts" onClick={() => setIsMenuOpen(false)}>Контакты</Link>
           </nav>
         )}

@@ -25,3 +25,76 @@ code {
     monospace;
 }
 
+/* Accessibility styles */
+:root {
+  --accessibility-font-size: 1rem;
+  --accessibility-letter-spacing: normal;
+  --accessibility-line-height: 1.5;
+  --accessibility-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+body.accessibility-enabled {
+  font-size: var(--accessibility-font-size) !important;
+  letter-spacing: var(--accessibility-letter-spacing) !important;
+  line-height: var(--accessibility-line-height) !important;
+  font-family: var(--accessibility-font-family) !important;
+}
+
+body.accessibility-enabled * {
+  font-size: inherit;
+  letter-spacing: inherit;
+  line-height: inherit;
+  font-family: inherit;
+}
+
+body.accessibility-enabled h1,
+body.accessibility-enabled h2,
+body.accessibility-enabled h3,
+body.accessibility-enabled h4,
+body.accessibility-enabled h5,
+body.accessibility-enabled h6 {
+  font-size: calc(var(--accessibility-font-size) * 1.5) !important;
+  line-height: var(--accessibility-line-height) !important;
+}
+
+body.accessibility-enabled p,
+body.accessibility-enabled span,
+body.accessibility-enabled div,
+body.accessibility-enabled a,
+body.accessibility-enabled li {
+  font-size: var(--accessibility-font-size) !important;
+  line-height: var(--accessibility-line-height) !important;
+}
+
+/* Color schemes */
+body.accessibility-enabled {
+  background-color: var(--accessibility-bg-color, inherit) !important;
+  color: var(--accessibility-text-color, inherit) !important;
+}
+
+body.accessibility-enabled * {
+  background-color: var(--accessibility-bg-color, inherit) !important;
+  color: var(--accessibility-text-color, inherit) !important;
+}
+
+body.accessibility-enabled a {
+  color: var(--accessibility-link-color, inherit) !important;
+}
+
+body.accessibility-enabled button {
+  background-color: var(--accessibility-bg-color, inherit) !important;
+  color: var(--accessibility-text-color, inherit) !important;
+  border-color: var(--accessibility-text-color, inherit) !important;
+}
+
+/* Graphics */
+body.accessibility-enabled img {
+  opacity: var(--accessibility-image-opacity, 1) !important;
+  filter: var(--accessibility-image-filter, none) !important;
+}
+
+body.accessibility-enabled svg {
+  opacity: var(--accessibility-image-opacity, 1) !important;
+  filter: var(--accessibility-image-filter, none) !important;
+}
+

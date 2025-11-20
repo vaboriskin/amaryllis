@@ -4,10 +4,12 @@ import { servicesData } from '../../data/services'
 import { doctorsData } from '../../data/doctors'
 import DoctorCard from '../../components/DoctorCard/DoctorCard'
 import Button from '../../components/Button/Button'
+import { useAppointmentModal } from '../../components/Layout/Layout'
 import './ServiceDetail.css'
 
 const ServiceDetail: React.FC = () => {
   const { serviceId } = useParams<{ serviceId: string }>()
+  const { openAppointmentModal } = useAppointmentModal()
   
   const service = servicesData.find(s => s.id === serviceId)
   const serviceDoctors = service 
@@ -101,9 +103,12 @@ const ServiceDetail: React.FC = () => {
                 Свяжитесь с нами для записи на консультацию или процедуру
               </p>
               <div className="cta-buttons">
-                <Button href="/appointment" variant="primary" size="large">
+                <button
+                  onClick={openAppointmentModal}
+                  className="btn btn-primary btn-large"
+                >
                   Записаться онлайн
-                </Button>
+                </button>
                 <Button href="tel:+74956576870" variant="secondary" size="large">
                   Позвонить нам
                 </Button>

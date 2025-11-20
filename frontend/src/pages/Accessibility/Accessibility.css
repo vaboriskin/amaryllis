@@ -1,0 +1,289 @@
+.accessibility-page {
+  min-height: 100vh;
+  background: #ffffff;
+  color: #000000;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.accessibility-page * {
+  box-sizing: border-box;
+  max-width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.accessibility-page .scroll-to-top {
+  max-width: none !important;
+  position: fixed !important;
+  left: auto !important;
+  right: 2rem !important;
+  bottom: 2rem !important;
+}
+
+@media (max-width: 768px) {
+  .accessibility-page .scroll-to-top {
+    right: 1rem !important;
+    bottom: 1rem !important;
+    left: auto !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .accessibility-page .scroll-to-top {
+    right: 0.75rem !important;
+    bottom: 0.75rem !important;
+    left: auto !important;
+  }
+}
+
+.accessibility-page img,
+.accessibility-page .service-icon,
+.accessibility-page .advantage-icon,
+.accessibility-page .doctor-photo,
+.accessibility-page iframe {
+  display: none !important;
+}
+
+.accessibility-page svg {
+  display: none !important;
+}
+
+.accessibility-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.accessibility-page.font-size-normal {
+  font-size: 1rem;
+  --accessibility-font-size: 1rem;
+}
+
+.accessibility-page.font-size-medium {
+  font-size: 1.25rem;
+  --accessibility-font-size: 1.25rem;
+}
+
+.accessibility-page.font-size-large {
+  font-size: 1.5rem;
+  --accessibility-font-size: 1.5rem;
+}
+
+.accessibility-page.font-size-xlarge {
+  font-size: 2rem;
+  --accessibility-font-size: 2rem;
+}
+
+.accessibility-page h1 {
+  font-size: calc(var(--accessibility-font-size, 1rem) * 2);
+  font-weight: 700;
+  margin: 2rem 0 1rem 0;
+  color: #000000;
+  border-bottom: 3px solid #000000;
+  padding-bottom: 0.5rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
+}
+
+.accessibility-page h2 {
+  font-size: calc(var(--accessibility-font-size, 1rem) * 1.5);
+  font-weight: 700;
+  margin: 1.5rem 0 1rem 0;
+  color: #000000;
+  border-bottom: 2px solid #000000;
+  padding-bottom: 0.5rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
+}
+
+.accessibility-page h3 {
+  font-size: calc(var(--accessibility-font-size, 1rem) * 1.25);
+  font-weight: 700;
+  margin: 1rem 0 0.5rem 0;
+  color: #000000;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
+}
+
+.accessibility-page p {
+  font-size: var(--accessibility-font-size, 1rem);
+  margin: 1rem 0;
+  line-height: 1.8;
+  color: #000000;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
+}
+
+.accessibility-page ul,
+.accessibility-page ol {
+  margin: 1rem 0;
+  padding-left: 2rem;
+  line-height: 1.8;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.accessibility-page li {
+  margin: 0.5rem 0;
+  font-size: var(--accessibility-font-size, 1rem);
+}
+
+.accessibility-page a {
+  color: #000000;
+  text-decoration: underline;
+  font-weight: 600;
+  font-size: var(--accessibility-font-size, 1rem);
+}
+
+.accessibility-page a:hover {
+  text-decoration: none;
+  background: #ffff00;
+}
+
+.accessibility-page button,
+.accessibility-page .button {
+  background: #ffffff;
+  border: 3px solid #000000;
+  color: #000000;
+  padding: 1rem 2rem;
+  font-size: var(--accessibility-font-size, 1rem);
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  min-height: 44px;
+  min-width: 44px;
+  max-width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  box-sizing: border-box;
+}
+
+.accessibility-page button:hover,
+.accessibility-page .button:hover {
+  background: #000000;
+  color: #ffffff;
+}
+
+.accessibility-page table {
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  display: block;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.accessibility-page th,
+.accessibility-page td {
+  border: 2px solid #000000;
+  padding: 0.75rem;
+  text-align: left;
+  font-size: var(--accessibility-font-size, 1rem);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
+}
+
+.accessibility-page th {
+  background: #000000;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.accessibility-section {
+  margin: 2rem 0;
+  padding: 1.5rem 0;
+  border-top: 1px solid #000000;
+}
+
+.accessibility-section:first-child {
+  border-top: none;
+}
+
+@media (max-width: 768px) {
+  .accessibility-page {
+    font-size: 1.1rem;
+  }
+
+  .accessibility-main {
+    padding: 1rem;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .accessibility-page h1 {
+    font-size: calc(var(--accessibility-font-size, 1.1rem) * 1.8) !important;
+    margin: 1rem 0 0.75rem 0;
+  }
+
+  .accessibility-page h2 {
+    font-size: calc(var(--accessibility-font-size, 1.1rem) * 1.5) !important;
+    margin: 1rem 0 0.75rem 0;
+  }
+
+  .accessibility-page h3 {
+    font-size: calc(var(--accessibility-font-size, 1.1rem) * 1.3) !important;
+  }
+
+  .accessibility-page h4 {
+    font-size: calc(var(--accessibility-font-size, 1.1rem) * 1.15) !important;
+  }
+
+  .accessibility-page button,
+  .accessibility-page .button {
+    width: 100%;
+    display: block;
+    margin: 0.5rem 0;
+    padding: 0.75rem 1rem;
+    box-sizing: border-box;
+    font-size: var(--accessibility-font-size, 1.1rem) !important;
+  }
+
+  .accessibility-page ul,
+  .accessibility-page ol {
+    padding-left: 1.5rem;
+    font-size: var(--accessibility-font-size, 1.1rem);
+  }
+
+  .accessibility-page p {
+    font-size: var(--accessibility-font-size, 1.1rem) !important;
+  }
+
+  .accessibility-page li {
+    font-size: var(--accessibility-font-size, 1.1rem) !important;
+  }
+
+  .accessibility-page a {
+    font-size: var(--accessibility-font-size, 1.1rem) !important;
+  }
+
+  .accessibility-section {
+    margin: 1rem 0;
+    padding: 1rem 0;
+  }
+
+  .accessibility-page table {
+    font-size: 1rem;
+    display: table;
+  }
+
+  .accessibility-page th,
+  .accessibility-page td {
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+}
+

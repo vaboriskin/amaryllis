@@ -1,0 +1,237 @@
+.accessibility-header {
+  background: #ffffff;
+  border-bottom: 2px solid #000000;
+  padding: 1rem 0;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+.accessibility-header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.accessibility-header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.accessibility-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #000000;
+  text-decoration: none;
+  text-transform: uppercase;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
+}
+
+.accessibility-logo:hover {
+  text-decoration: underline;
+}
+
+.accessibility-controls {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.font-size-control {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.font-size-label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #000000;
+  margin-right: 0.5rem;
+}
+
+.font-size-btn {
+  background: #ffffff;
+  border: 2px solid #000000;
+  color: #000000;
+  padding: 0;
+  font-weight: 700;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  box-sizing: border-box;
+  overflow: hidden;
+  line-height: 1;
+}
+
+.font-size-btn.font-size-normal {
+  font-size: 1rem;
+}
+
+.font-size-btn.font-size-medium {
+  font-size: 1.25rem;
+}
+
+.font-size-btn.font-size-large {
+  font-size: 1.5rem;
+}
+
+.font-size-btn.font-size-xlarge {
+  font-size: 2rem;
+}
+
+.font-size-btn:hover {
+  background: #f0f0f0;
+}
+
+.font-size-btn.active {
+  background: #000000;
+  color: #ffffff;
+}
+
+.normal-version-link {
+  color: #000000;
+  text-decoration: underline;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border: 2px solid #000000;
+  background: #ffffff;
+}
+
+.normal-version-link:hover {
+  background: #f0f0f0;
+}
+
+.accessibility-nav {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  border-top: 1px solid #000000;
+  padding-top: 1rem;
+}
+
+.accessibility-nav a {
+  color: #000000;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border: 2px solid transparent;
+  display: inline-block;
+}
+
+.accessibility-nav a:hover {
+  text-decoration: underline;
+  border-color: #000000;
+}
+
+.accessibility-nav a.active {
+  background: #000000;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .accessibility-header-container {
+    padding: 0 1rem;
+    max-width: 100%;
+  }
+
+  .accessibility-header-top {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .accessibility-logo {
+    font-size: 1.4rem;
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  .accessibility-controls {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .font-size-control {
+    width: 100%;
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .font-size-label {
+    font-size: 1.1rem;
+    margin-right: 0;
+    flex-shrink: 0;
+  }
+
+  .font-size-btn {
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    line-height: 1;
+  }
+
+  .font-size-btn.font-size-normal {
+    font-size: 1rem;
+  }
+
+  .font-size-btn.font-size-medium {
+    font-size: 1.25rem;
+  }
+
+  .font-size-btn.font-size-large {
+    font-size: 1.5rem;
+  }
+
+  .font-size-btn.font-size-xlarge {
+    font-size: 2rem;
+  }
+
+  .normal-version-link {
+    width: 100%;
+    text-align: center;
+    padding: 0.75rem;
+    box-sizing: border-box;
+    font-size: 1.1rem;
+  }
+
+  .accessibility-nav {
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+  }
+
+  .accessibility-nav a {
+    width: 100%;
+    text-align: left;
+    box-sizing: border-box;
+    padding: 0.75rem 1rem;
+    display: block;
+    font-size: 1.1rem;
+  }
+}
+

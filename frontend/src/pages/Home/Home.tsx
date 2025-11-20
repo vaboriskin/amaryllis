@@ -1,10 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Button from '../../components/Button/Button'
+import { useAppointmentModal } from '../../components/Layout/Layout'
 import { servicesData } from '../../data/services'
 import './Home.css'
 
 const Home: React.FC = () => {
+  const { openAppointmentModal } = useAppointmentModal()
   // Берем первые 12 услуг для главной страницы
   const services = servicesData.slice(0, 12).map(service => ({
     id: service.id,
@@ -55,9 +57,12 @@ const Home: React.FC = () => {
             <h1 className="hero-title">Медицинский центр в Кузьминках</h1>
             <p className="hero-subtitle">Новые возможности для вашего здоровья</p>
             <div className="hero-buttons">
-              <Button href="/appointment" variant="primary" size="large">
+              <button
+                onClick={openAppointmentModal}
+                className="btn btn-primary btn-large"
+              >
                 Записаться на прием
-              </Button>
+              </button>
               <Button href="/services" variant="outline" size="large">
                 Наши услуги
               </Button>
@@ -180,9 +185,12 @@ const Home: React.FC = () => {
               Свяжитесь с нами или запишитесь онлайн прямо сейчас
             </p>
             <div className="cta-buttons">
-              <Button href="/appointment" variant="primary" size="large">
+              <button
+                onClick={openAppointmentModal}
+                className="btn btn-primary btn-large"
+              >
                 Записаться онлайн
-              </Button>
+              </button>
               <Button href="tel:+74956576870" variant="secondary" size="large">
                 Позвонить нам
               </Button>

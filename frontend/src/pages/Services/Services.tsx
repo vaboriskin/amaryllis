@@ -1,10 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Button from '../../components/Button/Button'
+import { useAppointmentModal } from '../../components/Layout/Layout'
 import { servicesData } from '../../data/services'
 import './Services.css'
 
 const Services: React.FC = () => {
+  const { openAppointmentModal } = useAppointmentModal()
+  
   const services = servicesData.map(service => ({
     id: service.id,
     name: service.name,
@@ -45,9 +48,12 @@ const Services: React.FC = () => {
             Свяжитесь с нами для записи на консультацию или процедуру
           </p>
           <div className="cta-buttons">
-            <Button href="/appointment" variant="primary" size="large">
+            <button
+              onClick={openAppointmentModal}
+              className="btn btn-primary btn-large"
+            >
               Записаться на прием
-            </Button>
+            </button>
             <Button href="tel:+74956576870" variant="secondary" size="large">
               Позвонить нам
             </Button>

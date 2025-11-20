@@ -4,6 +4,11 @@ import './Patients.css'
 const Patients: React.FC = () => {
   const [selectedLicense, setSelectedLicense] = useState<string | null>(null)
 
+  // Прокрутка наверх при загрузке страницы
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {

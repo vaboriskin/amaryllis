@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './Footer.css'
 
 const Footer: React.FC = () => {
@@ -40,6 +41,15 @@ const Footer: React.FC = () => {
               <p>пн-пт: <strong>9:00 - 20:00</strong></p>
               <p>сб, вс: <strong>10:00 - 18:00</strong></p>
             </div>
+          </div>
+
+          <div className="footer-section">
+            <h4 className="footer-heading">Информация</h4>
+            <nav className="footer-nav">
+              <Link to="/patients">Пациентам</Link>
+              <Link to="/reviews">Отзывы</Link>
+              <Link to="/privacy-policy">Политика конфиденциальности</Link>
+            </nav>
           </div>
         </div>
 
