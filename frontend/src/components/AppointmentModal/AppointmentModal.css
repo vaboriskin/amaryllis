@@ -213,6 +213,67 @@
   border-color: #dee2e6;
 }
 
+.consent-section {
+  margin-top: 1rem;
+}
+
+.consent-checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+ cursor: pointer;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.consent-checkbox input[type="checkbox"] {
+  display: none;
+}
+
+.checkmark {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #2c3e50;
+  border-radius: 4px;
+  flex-shrink: 0;
+  margin-top: 0.25rem;
+  transition: all 0.3s ease;
+}
+
+.consent-checkbox input[type="checkbox"]:checked + .checkmark {
+  background-color: #3498db;
+  border-color: #3498db;
+}
+
+.consent-checkbox input[type="checkbox"]:checked + .checkmark::after {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.consent-text {
+  flex: 1;
+  color: #2c3e50;
+}
+
+.consent-text a {
+  color: #3498db;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.consent-text a:hover {
+  text-decoration: underline;
+}
+
 @media (max-width: 640px) {
   .appointment-modal-content {
     padding: 2rem 1.5rem;

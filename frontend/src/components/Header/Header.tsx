@@ -10,9 +10,7 @@ const Header: React.FC = () => {
   const menuToggleRef = useRef<HTMLButtonElement>(null)
   const navigate = useNavigate()
 
-  const whatsappNumber = '79963600436' // +7 (996) 360-04-36
-  const whatsappMessage = encodeURIComponent('Здравствуйте! Хочу записаться на прием.')
-
+  
   // Закрытие при клике вне блока
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -109,17 +107,6 @@ const Header: React.FC = () => {
                 </a>
               </div>
 
-              <div className="contacts-section">
-                <a 
-                  href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="whatsapp-button"
-                >
-                  <span className="whatsapp-icon">💬</span>
-                  <span>Написать в WhatsApp</span>
-                </a>
-              </div>
             </div>
           )}
           </div>

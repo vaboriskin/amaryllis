@@ -10,7 +10,8 @@ const AppointmentModal: React.FC<AppointmentModalProps> = ({ isOpen, onClose }) 
   const [name, setName] = useState('')
   const [phone, setPhone] = useState('+7 (9')
   const [time, setTime] = useState('')
-  const [errors, setErrors] = useState<{ phone?: string }>({})
+  const [consent, setConsent] = useState(false)
+  const [errors, setErrors] = useState<{ phone?: string, consent?: string }>({})
 
   useEffect(() => {
     if (isOpen) {
@@ -123,11 +124,11 @@ const AppointmentModal: React.FC<AppointmentModalProps> = ({ isOpen, onClose }) 
     }
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
 
     // Валидация
-    const newErrors: { phone?: string } = {}
+    const newErrors: { phone?: string, consent?: string } = {}
     const phoneDigits = phone.replace(/\D/g, '')
     if (!phone.trim() || phone.trim() === '+7 (9' || phoneDigits.length < 11) {
       newErrors.phone = 'Введите полный номер телефона'
@@ -135,19 +136,35 @@ const AppointmentModal: React.FC<AppointmentModalProps> = ({ isOpen, onClose }) 
       newErrors.phone = 'Введите корректный номер телефона'
     }
 
+    // Проверяем, что пользователь согласился с условиями
+    if (!consent) {
+      newErrors.consent = 'Необходимо согласиться с условиями обработки персональных данных'
+    }
+
     if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors)
       return
     }
 
-    // Здесь можно добавить отправку данных на сервер
-    console.log('Данные записи:', { name, phone, time })
+    try {
+      const response = await fetch('http://localhost:5001/api/appointments', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ name, phone, time }),
+      })
 
-    // Закрываем модальное окно после отправки
-    onClose()
-    
-    // Можно показать сообщение об успешной отправке
-    alert('Спасибо! Мы свяжемся с вами в ближайшее время.')
+      if (response.ok) {
+        alert('Спасибо! Мы свяжемся с вами в ближайшее время.')
+        onClose()
+      } else {
+        alert('Произошла ошибка при отправке заявки. Попробуйте еще раз.')
+      }
+    } catch (error) {
+      console.error('Error submitting appointment:', error)
+      alert('Произошла ошибка при отправке заявки. Попробуйте еще раз.')
+    }
   }
 
   const handleModalClick = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -226,6 +243,34 @@ const AppointmentModal: React.FC<AppointmentModalProps> = ({ isOpen, onClose }) 
               onChange={(e) => setTime(e.target.value)}
               placeholder="Например: с 10:00 до 18:00"
             />
+          </div>
+
+          <div className="consent-section">
+            <label className="consent-checkbox">
+              <input 
+                type="checkbox" 
+                id="consent"
+                checked={consent}
+                onChange={(e) => {
+                  setConsent(e.target.checked);
+                  if (errors.consent) {
+                    setErrors({ ...errors, consent: undefined });
+                  }
+                }}
+              />
+              <span className="checkmark"></span>
+              <span className="consent-text">
+                Я принимаю{' '}
+                <a href="/privacy-policy" target="_blank" rel="noopener noreferrer">
+                  соглашение о конфиденциальности
+                </a>{' '}
+                и{' '}
+                <a href="/soglpersdan.pdf" target="_blank" rel="noopener noreferrer">
+                  согласие на обработку персональных данных
+                </a>
+              </span>
+            </label>
+            {errors.consent && <span className="error-message">{errors.consent}</span>}
           </div>
 
           <div className="form-actions">

@@ -200,13 +200,6 @@
   margin-bottom: 1.5rem;
 }
 
-.contacts-section:last-child {
-  margin-bottom: 0;
-  margin-top: 0.5rem;
-  display: flex;
-  justify-content: center;
-}
-
 .contacts-title {
   font-size: 0.9rem;
   font-weight: 700;

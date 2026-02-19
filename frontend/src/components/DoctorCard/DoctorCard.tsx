@@ -4,7 +4,6 @@ import './DoctorCard.css'
 interface DoctorCardProps {
   name: string
   position: string
-  description: string
   photo: string
   id: string
 }
@@ -12,7 +11,6 @@ interface DoctorCardProps {
 const DoctorCard: React.FC<DoctorCardProps> = ({
   name,
   position,
-  description,
   photo,
   id,
 }) => {
@@ -29,7 +27,6 @@ const DoctorCard: React.FC<DoctorCardProps> = ({
       <div className="doctor-info">
         <h3 className="doctor-name">{name}</h3>
         <p className="doctor-position">{position}</p>
-        <p className="doctor-description">{description}</p>
       </div>
     </div>
   )
