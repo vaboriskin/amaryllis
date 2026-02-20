@@ -12,7 +12,6 @@ const DoctorCard: React.FC<DoctorCardProps> = ({
   name,
   position,
   photo,
-  id,
 }) => {
   return (
     <div className="doctor-card">

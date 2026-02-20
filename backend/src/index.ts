@@ -25,7 +25,7 @@ const transporter = nodemailer.createTransport({
 })
 
 // Routes
-app.get('/api/health', (req: Request, res: Response) => {
+app.get('/api/health', (_req: Request, res: Response) => {
   res.json({ status: 'ok', message: 'Server is running' })
 })
 
@@ -52,10 +52,10 @@ app.post('/api/appointments', async (req: Request, res: Response) => {
 
     await transporter.sendMail(mailOptions)
 
-    res.json({ message: 'Appointment request sent successfully' })
+    return res.json({ message: 'Appointment request sent successfully' })
   } catch (error) {
     console.error('Error sending email:', error)
-    res.status(500).json({ error: 'Failed to send appointment request' })
+    return res.status(500).json({ error: 'Failed to send appointment request' })
   }
 })
 

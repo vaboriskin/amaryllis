@@ -47,7 +47,7 @@ const Footer: React.FC = () => {
             <h4 className="footer-heading">Информация</h4>
             <nav className="footer-nav">
               <Link to="/patients">Пациентам</Link>
-              <Link to="/reviews">Отзывы</Link>
+              <a href="https://yandex.com/maps/213/moscow/?from=mapframe&ll=37.811791%2C55.696368&mode=poi&poi%5Bpoint%5D=37.811695%2C55.695841&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D1095340590&source=mapframe&tab=reviews&um=constructor%3A289f872a127aa0ea26a7b99f04c6ba2292b3835f9b8537a027d4c619ce4168f1&utm_source=mapframe&z=18" target="_blank" rel="noopener noreferrer">Отзывы</a>
               <Link to="/privacy-policy">Политика конфиденциальности</Link>
             </nav>
           </div>

@@ -88,7 +88,6 @@ const ServiceDetail: React.FC = () => {
                     id={doctor.id}
                     name={doctor.name}
                     position={doctor.position}
-                    description={doctor.description}
                     photo={doctor.photo}
                   />
                 ))}

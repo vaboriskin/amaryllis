@@ -15,7 +15,6 @@ const AccessibilityDoctors: React.FC = () => {
           <div key={doctor.id} style={{ marginBottom: '2rem', paddingBottom: '2rem', borderBottom: '2px solid #000000' }}>
             <h2>{doctor.name}</h2>
             <p><strong>Должность:</strong> {doctor.position}</p>
-            <p>{doctor.description}</p>
           </div>
         ))}
       </section>
