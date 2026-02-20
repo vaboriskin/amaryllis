@@ -67,7 +67,7 @@ const AccessibilityHome: React.FC = () => {
           <strong>Email:</strong> <a href="mailto:amarillis@internet.ru">amarillis@internet.ru</a>
         </p>
         <p>
-          <strong>Режим работы:</strong> пн-пт: 9:00 - 20:00, сб, вс: 10:00 - 18:00
+          <strong>Режим работы:</strong> пн-пт: 9:00 - 20:00, сб: 10:00 - 18:00, вс: выходной
         </p>
         <p>
           <Link to="/accessibility/contacts" className="button">

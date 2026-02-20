@@ -39,7 +39,8 @@ const Footer: React.FC = () => {
             <h4 className="footer-heading">Режим работы</h4>
             <div className="footer-hours">
               <p>пн-пт: <strong>9:00 - 20:00</strong></p>
-              <p>сб, вс: <strong>10:00 - 18:00</strong></p>
+              <p>сб: <strong>10:00 - 18:00</strong></p>
+              <p>вс: <strong>выходной</strong></p>
             </div>
           </div>
 

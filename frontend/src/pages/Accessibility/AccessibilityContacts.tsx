@@ -67,7 +67,7 @@ const AccessibilityContacts: React.FC = () => {
             </tr>
             <tr>
               <td>Воскресенье</td>
-              <td>10:00 - 18:00</td>
+              <td>выходной</td>
             </tr>
           </tbody>
         </table>

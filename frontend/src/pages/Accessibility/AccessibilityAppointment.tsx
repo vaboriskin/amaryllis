@@ -30,7 +30,10 @@ const AccessibilityAppointment: React.FC = () => {
           <strong>Понедельник - Пятница:</strong> 09:00 - 20:00
         </p>
         <p>
-          <strong>Суббота, Воскресенье:</strong> 10:00 - 18:00
+          <strong>Суббота:</strong> 10:00 - 18:00
+        </p>
+        <p>
+          <strong>Воскресенье:</strong> выходной
         </p>
       </section>
 

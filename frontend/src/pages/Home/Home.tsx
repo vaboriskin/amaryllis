@@ -120,7 +120,7 @@ const Home: React.FC = () => {
                   <span className="feature-label">Лет опыта</span>
                 </div>
                 <div className="about-feature">
-                  <span className="feature-number">50+</span>
+                  <span className="feature-number">20+</span>
                   <span className="feature-label">Специалистов</span>
                 </div>
                 <div className="about-feature">
@@ -130,9 +130,20 @@ const Home: React.FC = () => {
               </div>
             </div>
             <div className="about-image">
-              <div className="image-placeholder">
-                <span>🏥</span>
-                <p>Фото медицинского центра</p>
+              <h3 className="work-schedule-title">Режим работы</h3>
+              <div className="work-hours">
+                <div className="work-day">
+                  <span className="day-name">пн-пт:</span>
+                  <span className="day-time">9:00 - 20:00</span>
+                </div>
+                <div className="work-day">
+                  <span className="day-name">сб:</span>
+                  <span className="day-time">10:00 - 18:00</span>
+                </div>
+                <div className="work-day">
+                  <span className="day-name">вс:</span>
+                  <span className="day-time">выходной</span>
+                </div>
               </div>
             </div>
           </div>

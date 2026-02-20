@@ -299,31 +299,50 @@
 
 .about-image {
   display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.image-placeholder {
-  width: 100%;
-  max-width: 500px;
-  height: 400px;
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-  border-radius: 12px;
-  display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
 }
 
-.image-placeholder span {
-  font-size: 5rem;
+.work-schedule-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2c3e50;
   margin-bottom: 1rem;
+  text-align: center;
 }
 
-.image-placeholder p {
+.work-hours {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.work-day {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #2c3e50;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.work-day .day-name {
+  font-weight: 500;
   color: #7f8c8d;
-  font-size: 1.1rem;
+}
+
+.work-day .day-time {
+  font-weight: 600;
+  color: #2c3e50;
 }
 
 /* Advantages Section */

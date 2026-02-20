@@ -84,7 +84,7 @@ const Contacts: React.FC = () => {
                   </div>
                   <div className="work-day">
                     <span className="day-name">Воскресенье</span>
-                    <span className="day-time">10:00-18:00</span>
+                    <span className="day-time">выходной</span>
                   </div>
                 </div>
               </div>
