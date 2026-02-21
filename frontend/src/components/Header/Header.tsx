@@ -45,7 +45,7 @@ const Header: React.FC = () => {
         <nav className="nav desktop-nav">
           <Link to="/">Главная</Link>
           <Link to="/services">Услуги</Link>
-          <Link to="/doctors">Врачи</Link>
+          <Link to="/doctors">Сотрудники</Link>
           <Link to="/contacts">Контакты</Link>
         </nav>
         <div className="header-actions">
@@ -135,7 +135,7 @@ const Header: React.FC = () => {
           <nav className="mobile-nav" ref={menuRef}>
             <Link to="/" onClick={() => setIsMenuOpen(false)}>Главная</Link>
             <Link to="/services" onClick={() => setIsMenuOpen(false)}>Услуги</Link>
-            <Link to="/doctors" onClick={() => setIsMenuOpen(false)}>Врачи</Link>
+            <Link to="/doctors" onClick={() => setIsMenuOpen(false)}>Сотрудники</Link>
             <Link to="/contacts" onClick={() => setIsMenuOpen(false)}>Контакты</Link>
           </nav>
         )}

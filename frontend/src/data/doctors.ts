@@ -44,25 +44,31 @@ export const doctorsData: Doctor[] = [
   {
     id: 'boriskin',
     name: 'Борискин Алексей Александрович',
-    position: 'Заместитель главного врача по медицинской помощи',
+    position: 'заместитель главного врача по медицинской помощи, к.м.н, врач-уролог, врач-андролог',
     photo: boriskinPhoto,
   },
   {
     id: 'bezbah',
     name: 'Ирина Викторовна Безбах',
-    position: 'Заместитель главного врача по акушерско-гинекологической помощи',
+    position: 'Заместитель главного врача по акушерско-гинекологической помощи, к.м.н., врач акушер-гинеколог, врач гинеколог-эндокринолог',
     photo: bezbahPhoto,
+  },
+  {
+    id: 'gudilina',
+    name: 'Гудилина Анна Владимировна',
+    position: 'Администратор',
+    photo: gudilinaPhoto,
   },
   {
     id: 'loboda',
     name: 'Лобода Татьяна Ивановна',
-    position: 'Врач акушер-гинеколог, эндокринолог',
+    position: 'Врач акушер-гинеколог, к.м.н., врач гинеколог-эндокринолог',
     photo: lobodaPhoto,
   },
   {
     id: 'glazunova',
     name: 'Глазунова Светлана Анатольевна',
-    position: 'Врач-кардиолог, врач-терапевт',
+    position: 'Врач общей практики, врач кардиолог, врач функциональной диагностики',
     photo: glazunovaPhoto,
   },
   {
@@ -119,12 +125,7 @@ export const doctorsData: Doctor[] = [
     position: 'Старшая медицинская сестра',
     photo: ivanovaPhoto,
   },
-  {
-    id: 'gudilina',
-    name: 'Гудилина Анна Владимировна',
-    position: 'Администратор',
-    photo: gudilinaPhoto,
-  },
+  
   {
     id: 'kurochkina',
     name: 'Курочкина Екатерина Николаевна',
@@ -140,7 +141,7 @@ export const doctorsData: Doctor[] = [
   {
     id: 'fatahutdinov',
     name: 'Фатахутдинов Альберт Харисович',
-    position: 'Врач-оториноларинголог высшей квалификационной категории',
+    position: 'Врач оториноларинголог',
     photo: fatahutdinovPhoto,
   },
 ]
