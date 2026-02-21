@@ -1,0 +1,25 @@
+# Host nginx config example for reverse proxy to Docker services
+# Save as /etc/nginx/sites-available/leadercenter
+# Then enable: sudo ln -s /etc/nginx/sites-available/leadercenter /etc/nginx/sites-enabled/
+
+server {
+    listen 80;
+    server_name leadercenter.ru www.leadercenter.ru;
+
+    # Redirect HTTP to HTTPS (Certbot will manage HTTPS later)
+    location / {
+        proxy_pass http://127.0.0.1:8080;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+
+    location /api/ {
+        proxy_pass http://127.0.0.1:5001;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+}

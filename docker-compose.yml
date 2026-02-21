@@ -30,7 +30,7 @@ services:
       dockerfile: frontend/Dockerfile
     container_name: amaryllis-frontend
     ports:
-      - "80:80"
+      - "8080:80"
     depends_on:
       - backend
     restart: unless-stopped
