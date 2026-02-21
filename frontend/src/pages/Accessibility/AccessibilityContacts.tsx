@@ -19,9 +19,6 @@ const AccessibilityContacts: React.FC = () => {
         <p>
           <a href="tel:+74956576870">+7 (495) 657-68-70</a>
         </p>
-        <p>
-          <a href="tel:+74956576871">+7 (495) 657-68-71</a>
-        </p>
       </section>
 
       <section className="accessibility-section">
@@ -67,7 +64,7 @@ const AccessibilityContacts: React.FC = () => {
             </tr>
             <tr>
               <td>Воскресенье</td>
-              <td>выходной</td>
+              <td>10:00 - 18:00</td>
             </tr>
           </tbody>
         </table>

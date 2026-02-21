@@ -185,7 +185,7 @@
 
 @media (max-width: 1024px) {
   .services-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
@@ -208,8 +208,9 @@
     padding: 0 1rem;
   }
 
-  .services-grid {
-    grid-template-columns: 1fr;
+  /* More specific to override other global .services-grid rules (e.g. Home.css) */
+  .services-page .services-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
     gap: 1.5rem;
     padding: 2rem 0;
   }
@@ -261,8 +262,8 @@
 }
 
 @media (max-width: 480px) {
-  .services-grid {
-    grid-template-columns: 1fr;
+  .services-page .services-grid {
+    grid-template-columns: 1fr !important;
   }
 
   .service-card {

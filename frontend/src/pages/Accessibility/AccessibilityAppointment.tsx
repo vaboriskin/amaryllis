@@ -13,9 +13,6 @@ const AccessibilityAppointment: React.FC = () => {
             <strong>По телефону:</strong> <a href="tel:+74956576870">+7 (495) 657-68-70</a>
           </li>
           <li>
-            <strong>По телефону:</strong> <a href="tel:+74956576871">+7 (495) 657-68-71</a>
-          </li>
-          <li>
             <strong>По электронной почте:</strong> <a href="mailto:amarillis@internet.ru">amarillis@internet.ru</a>
           </li>
           <li>
@@ -30,10 +27,7 @@ const AccessibilityAppointment: React.FC = () => {
           <strong>Понедельник - Пятница:</strong> 09:00 - 20:00
         </p>
         <p>
-          <strong>Суббота:</strong> 10:00 - 18:00
-        </p>
-        <p>
-          <strong>Воскресенье:</strong> выходной
+          <strong>Суббота и воскресенье:</strong> 10:00 - 18:00
         </p>
       </section>
 

@@ -37,8 +37,8 @@ const Home: React.FC = () => {
     },
     {
       icon: '📜',
-      title: 'Лицензированные сотрудники',
-      description: 'Ваше лечение будет выполняться только лицензированными врачами',
+      title: 'Аккредитованные сотрудники',
+      description: 'Ваше лечение будет выполняться только аккредитованными врачами',
     },
     {
       icon: '💚',
@@ -137,12 +137,8 @@ const Home: React.FC = () => {
                   <span className="day-time">9:00 - 20:00</span>
                 </div>
                 <div className="work-day">
-                  <span className="day-name">сб:</span>
+                  <span className="day-name">сб, вс:</span>
                   <span className="day-time">10:00 - 18:00</span>
-                </div>
-                <div className="work-day">
-                  <span className="day-name">вс:</span>
-                  <span className="day-time">выходной</span>
                 </div>
               </div>
             </div>

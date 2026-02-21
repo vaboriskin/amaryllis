@@ -78,10 +78,6 @@ const Header: React.FC = () => {
                     <span className="contact-icon">📞</span>
                     <span>+7 (495) 657-68-70</span>
                   </a>
-                  <a href="tel:+74956576871" className="contact-item">
-                    <span className="contact-icon">📞</span>
-                    <span>+7 (495) 657-68-71</span>
-                  </a>
                 </div>
               </div>
 
@@ -92,14 +88,10 @@ const Header: React.FC = () => {
                     <span className="day-name">пн-пт:</span>
                     <span className="day-time">9:00 - 20:00</span>
                   </div>
-                  <div className="work-day">
-                    <span className="day-name">сб:</span>
-                    <span className="day-time">10:00 - 18:00</span>
-                  </div>
-                  <div className="work-day">
-                    <span className="day-name">вс:</span>
-                    <span className="day-time">выходной</span>
-                  </div>
+                    <div className="work-day">
+                      <span className="day-name">сб, вс:</span>
+                      <span className="day-time">10:00 - 18:00</span>
+                    </div>
                 </div>
               </div>
 

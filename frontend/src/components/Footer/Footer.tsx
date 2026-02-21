@@ -25,8 +25,7 @@ const Footer: React.FC = () => {
               </p>
               <p className="contact-item">
                 <span className="contact-icon">📞</span>
-                <a href="tel:+74956576870">+7 (495) 657-68-70</a><br />
-                <a href="tel:+74956576871">+7 (495) 657-68-71</a>
+                <a href="tel:+74956576870">+7 (495) 657-68-70</a>
               </p>
               <p className="contact-item">
                 <span className="contact-icon">✉️</span>
@@ -39,8 +38,7 @@ const Footer: React.FC = () => {
             <h4 className="footer-heading">Режим работы</h4>
             <div className="footer-hours">
               <p>пн-пт: <strong>9:00 - 20:00</strong></p>
-              <p>сб: <strong>10:00 - 18:00</strong></p>
-              <p>вс: <strong>выходной</strong></p>
+              <p>сб, вс: <strong>10:00 - 18:00</strong></p>
             </div>
           </div>
 

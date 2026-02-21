@@ -33,10 +33,6 @@ const Contacts: React.FC = () => {
                   <a href="tel:+74956576870" className="contact-link">
                     +7 (495) 657-68-70
                   </a>
-                  <br />
-                  <a href="tel:+74956576871" className="contact-link">
-                    8 (495) 657-68-71
-                  </a>
                 </p>
               </div>
             </section>
@@ -84,7 +80,7 @@ const Contacts: React.FC = () => {
                   </div>
                   <div className="work-day">
                     <span className="day-name">Воскресенье</span>
-                    <span className="day-time">выходной</span>
+                    <span className="day-time">10:00-18:00</span>
                   </div>
                 </div>
               </div>
