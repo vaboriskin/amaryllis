@@ -10,7 +10,7 @@ export interface Doctor {
 // Импорты фото врачей
 import bezbahPhoto from '../assets/images/doctors/bezbah.jpg'
 import boriskinPhoto from '../assets/images/doctors/boriskin.jpg'
-import boriskinaPhoto from '../assets/images/doctors/boriskina.jpg'
+/* import boriskinaPhoto from '../assets/images/doctors/boriskina.jpg' */
 import boykoPhoto from '../assets/images/doctors/boyko.jpg'
 import gerasimenkoPhoto from '../assets/images/doctors/gerasimenko.jpg'
 import glazunovaPhoto from '../assets/images/doctors/glazunova.jpg'
@@ -29,12 +29,12 @@ import dobrikovPhoto from '../assets/images/doctors/dobrikov.jpg'
 import fatahutdinovPhoto from '../assets/images/doctors/fatahutdinov.jpg'
 
 export const doctorsData: Doctor[] = [
-  {
+  /* {
     id: 'boriskina',
     name: 'Борискина Наталья Викторовна',
     position: 'Генеральный директор',
     photo: boriskinaPhoto,
-  },
+  }, */
   {
     id: 'boyko',
     name: 'Бойко Наталья Дмитриевна',
