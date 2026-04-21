@@ -161,7 +161,7 @@ export const servicesData: Service[] = [
       'Остеопороз, частые переломы, особенно у женщин в менопаузе.',
       'Профилактические осмотры, особенно при наличии факторов риска эндокринных заболеваний.',
     ],
-    doctorIds: ['shishova', 'loboda'],
+    doctorIds: ['shishova', 'loboda', 'bezbah'],
   },
   {
     id: 'nevrologiya',
