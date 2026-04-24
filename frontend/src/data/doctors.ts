@@ -20,6 +20,7 @@ import kirillinaPhoto from '../assets/images/doctors/kirillina.jpg'
 import kovalenkoPhoto from '../assets/images/doctors/kovalenko.jpg'
 import kurochkinaPhoto from '../assets/images/doctors/kurochkina.jpg'
 import lobodaPhoto from '../assets/images/doctors/loboda.jpg'
+import latipovPhoto from '../assets/images/doctors/latipov.jpg'
 import mamaladzePhoto from '../assets/images/doctors/mamaladze.jpg'
 import matkovaPhoto from '../assets/images/doctors/matkova.jpg'
 import poluboyarovPhoto from '../assets/images/doctors/poluboyarov.jpg'
@@ -143,6 +144,12 @@ export const doctorsData: Doctor[] = [
     name: 'Фатахутдинов Альберт Харисович',
     position: 'Врач оториноларинголог',
     photo: fatahutdinovPhoto,
+  },
+  {
+    id: 'latipov',
+    name: 'Латыпов Оскар Фаритович',
+    position: 'Массажист, кандидат наук',
+    photo: latipovPhoto,
   },
 ]
 
