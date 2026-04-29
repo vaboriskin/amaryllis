@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { servicesData } from '../../data/services'
 import { doctorsData } from '../../data/doctors'
@@ -10,11 +10,61 @@ import './ServiceDetail.css'
 const ServiceDetail: React.FC = () => {
   const { serviceId } = useParams<{ serviceId: string }>()
   const { openAppointmentModal } = useAppointmentModal()
+  const [serviceItems, setServiceItems] = useState<Array<{
+    id: string
+    name: string
+    price: number
+    currency: string
+  }>>([])
+  const [isItemsLoading, setIsItemsLoading] = useState(true)
   
   const service = servicesData.find(s => s.id === serviceId)
   const serviceDoctors = service 
     ? doctorsData.filter(doctor => service.doctorIds.includes(doctor.id))
     : []
+
+  useEffect(() => {
+    const abortController = new AbortController()
+
+    const fetchItems = async () => {
+      if (!serviceId) {
+        setServiceItems([])
+        setIsItemsLoading(false)
+        return
+      }
+
+      try {
+        setIsItemsLoading(true)
+        const response = await fetch(`/api/service-items/${serviceId}`, {
+          signal: abortController.signal,
+        })
+
+        if (!response.ok) {
+          setServiceItems([])
+          return
+        }
+
+        const data = await response.json() as Array<{
+          id: string
+          name: string
+          price: number
+          currency: string
+        }>
+        setServiceItems(data)
+      } catch (error) {
+        if ((error as DOMException).name !== 'AbortError') {
+          setServiceItems([])
+        }
+      } finally {
+        setIsItemsLoading(false)
+      }
+    }
+
+    void fetchItems()
+    return () => {
+      abortController.abort()
+    }
+  }, [serviceId])
 
   if (!service) {
     return (
@@ -52,6 +102,32 @@ const ServiceDetail: React.FC = () => {
             <h2 className="section-title">Описание услуги</h2>
             <div className="service-description">
               <p>{service.fullDescription}</p>
+            </div>
+          </section>
+
+          <section className="service-price-section">
+            <h2 className="section-title">Услуги и цены</h2>
+            <div className="service-price-card">
+              {isItemsLoading ? (
+                <p className="service-price-loading">Загрузка цены...</p>
+              ) : serviceItems.length > 0 ? (
+                <div className="service-items-list">
+                  {serviceItems.map((item) => (
+                    <div key={item.id} className="service-item-row">
+                      <span className="service-item-name">{item.name}</span>
+                      <span className="service-item-price">
+                        {new Intl.NumberFormat('ru-RU', {
+                          style: 'currency',
+                          currency: item.currency || 'RUB',
+                          maximumFractionDigits: 0,
+                        }).format(item.price)}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <p className="service-price-fallback">Уточняйте по телефону</p>
+              )}
             </div>
           </section>
 

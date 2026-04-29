@@ -8,11 +8,15 @@ import ServiceDetail from './pages/ServiceDetail/ServiceDetail'
 import Contacts from './pages/Contacts/Contacts'
 import PrivacyPolicy from './pages/PrivacyPolicy/PrivacyPolicy'
 import Accessibility from './pages/Accessibility/Accessibility'
+import AdminLogin from './pages/Admin/AdminLogin.tsx'
+import AdminPrices from './pages/Admin/AdminPrices.tsx'
 
 function App() {
   return (
     <Router>
       <Routes>
+        <Route path="/admin/login" element={<AdminLogin />} />
+        <Route path="/admin/prices" element={<AdminPrices />} />
         <Route path="/accessibility/*" element={<Accessibility />} />
         <Route path="/*" element={
           <Layout>

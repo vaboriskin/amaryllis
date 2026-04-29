@@ -1,0 +1,46 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../../node_modules/.prisma/client"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model AdminUser {
+  id           String   @id @default(cuid())
+  email        String   @unique
+  passwordHash String
+  role         String   @default("admin")
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  prices       ServicePrice[] @relation("PriceUpdatedBy")
+  items        ServiceItem[]  @relation("ItemUpdatedBy")
+}
+
+model ServicePrice {
+  id        String   @id @default(cuid())
+  serviceId String   @unique
+  price     Decimal  @db.Decimal(10, 2)
+  currency  String   @default("RUB")
+  isActive  Boolean  @default(true)
+  updatedAt DateTime @updatedAt
+  updatedBy String?
+  updater   AdminUser? @relation("PriceUpdatedBy", fields: [updatedBy], references: [id], onDelete: SetNull)
+}
+
+model ServiceItem {
+  id         String    @id @default(cuid())
+  categoryId String
+  name       String
+  price      Decimal   @db.Decimal(10, 2)
+  currency   String    @default("RUB")
+  isActive   Boolean   @default(true)
+  sortOrder  Int       @default(0)
+  updatedAt  DateTime  @updatedAt
+  updatedBy  String?
+  updater    AdminUser? @relation("ItemUpdatedBy", fields: [updatedBy], references: [id], onDelete: SetNull)
+
+  @@index([categoryId, isActive, sortOrder])
+}
