@@ -71,6 +71,40 @@ const Home: React.FC = () => {
         </div>
       </section>
 
+      {/* Promotion Section */}
+      <section className="promotion-section">
+        <div className="container">
+          <div className="promotion-card">
+            <div className="promotion-content">
+              <h2 className="promotion-title">МАССАЖ ПОБЕДЫ!</h2>
+              <p className="promotion-description">
+                Бесплатный сеанс массажа спины в нашем массажном кабинете с 4 по 7 мая 2026 года, каждый кто предварительно запишется на прием по времени один массаж спины от копчика до затылка бесплатно, продолжительность сеанса 30 минут.
+              </p>
+              <p className="promotion-description">
+                Спешите! Количество мест ограничено, время записи с 17.00 до 20.00 часов, акция действует только в указанные дни!
+              </p>
+              <p className="promotion-description">
+                Соглашаясь на акцию клиент даёт свое согласие на рассылку контента и информации на мероприятия и акции реализуемые медицинской клиникой Амариллис!
+              </p>
+              <p className="promotion-description">
+                Запись по телефону и на сайте организации.
+              </p>
+              <div className="promotion-buttons">
+                <button
+                  onClick={openAppointmentModal}
+                  className="btn btn-primary btn-large"
+                >
+                  Записаться на акцию
+                </button>
+                <Button href="tel:+74956576870" variant="outline" size="large">
+                  Позвонить
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Services Section */}
       <section className="services-section">
         <div className="container">
