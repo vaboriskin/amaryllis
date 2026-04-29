@@ -9,6 +9,9 @@ COPY backend ./
 # Устанавливаем зависимости
 RUN npm install
 
+# Генерируем Prisma client
+RUN npm run prisma:generate
+
 # Собираем TypeScript
 RUN npm run build
 
@@ -19,6 +22,7 @@ WORKDIR /app
 
 # Копируем файлы зависимостей
 COPY backend/package*.json ./
+COPY backend/prisma ./prisma
 
 # Устанавливаем только production зависимости
 RUN npm install --omit=dev --no-optional

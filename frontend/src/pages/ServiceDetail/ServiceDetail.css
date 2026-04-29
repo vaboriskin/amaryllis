@@ -71,6 +71,53 @@
   margin-bottom: 4rem;
 }
 
+.service-price-section {
+  margin-bottom: 4rem;
+}
+
+.service-price-card {
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  border-radius: 12px;
+  padding: 2rem;
+  border: 1px solid #e3eaf1;
+}
+
+.service-price-value {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+  color: #2c3e50;
+}
+
+.service-price-fallback,
+.service-price-loading {
+  font-size: 1.1rem;
+  margin: 0;
+  color: #555;
+}
+
+.service-items-list {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.service-item-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.service-item-name {
+  color: #334155;
+}
+
+.service-item-price {
+  font-weight: 700;
+  color: #1e293b;
+}
+
 .section-title {
   font-size: 2rem;
   font-weight: 700;
@@ -266,10 +313,19 @@
   }
 
   .service-description-section,
+  .service-price-section,
   .service-methods-section,
   .service-when-section,
   .service-doctors-section {
     margin-bottom: 2.5rem;
+  }
+
+  .service-price-card {
+    padding: 1.5rem;
+  }
+
+  .service-price-value {
+    font-size: 1.6rem;
   }
 
   .service-methods-section {
