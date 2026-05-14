@@ -148,7 +148,7 @@ export const doctorsData: Doctor[] = [
   {
     id: 'latipov',
     name: 'Латыпов Оскар Фаритович',
-    position: 'Массажист, кандидат медицинских наук',
+    position: 'Массажист, кандидат педагогических наук',
     photo: latipovPhoto,
   },
 ]
