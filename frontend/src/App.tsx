@@ -8,6 +8,7 @@ import ServiceDetail from './pages/ServiceDetail/ServiceDetail'
 import Contacts from './pages/Contacts/Contacts'
 import PrivacyPolicy from './pages/PrivacyPolicy/PrivacyPolicy'
 import Accessibility from './pages/Accessibility/Accessibility'
+import DoctorProfile from './pages/DoctorProfile/DoctorProfile'
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/doctors" element={<Doctors />} />
+              <Route path="/doctors/:doctorId" element={<DoctorProfile />} />
               <Route path="/patients" element={<Patients />} />
               <Route path="/services" element={<Services />} />
               <Route path="/services/:serviceId" element={<ServiceDetail />} />
