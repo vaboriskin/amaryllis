@@ -107,7 +107,7 @@ export const servicesData: Service[] = [
       'Кровотечения из носа, инородные тела в ухе, горле или носу.',
       'Головокружения, связанные с заболеваниями внутреннего уха.',
     ],
-    doctorIds: ['poluboyarov'],
+    doctorIds: ['fatahutdinov'],
   },
   {
     id: 'terapiya',
