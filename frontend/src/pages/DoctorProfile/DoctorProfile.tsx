@@ -128,6 +128,20 @@ const DoctorProfile: React.FC = () => {
             </section>
           )}
 
+          {profile?.sections?.map(section => (
+            <section className="dp-section" key={section.title}>
+              <h2 className="dp-section-title">{section.title}</h2>
+              <ul className="dp-skills-list">
+                {section.items.map((item, i) => (
+                  <li key={i} className="dp-skill-item">
+                    <span className="dp-skill-dot" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </section>
+          ))}
+
           {/* CTA */}
           <section className="dp-cta-section">
             <div className="dp-cta-inner">
