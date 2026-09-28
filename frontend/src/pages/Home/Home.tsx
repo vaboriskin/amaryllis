@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import Button from '../../components/Button/Button'
 import { useAppointmentModal } from '../../components/Layout/Layout'
 import { servicesData } from '../../data/services'
+import orangeOctoberImage from '../../assets/images/backgrounds/orange-october-2026.jpg'
 import './Home.css'
 
 const Home: React.FC = () => {
@@ -66,6 +67,42 @@ const Home: React.FC = () => {
               <Button href="/services" variant="outline" size="large">
                 Наши услуги
               </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* October promotion */}
+      <section className="promotion-section" aria-labelledby="orange-october-title">
+        <div className="container">
+          <div className="promotion-card">
+            <div className="promotion-image-wrap">
+              <img
+                className="promotion-image"
+                src={orangeOctoberImage}
+                alt="Осенняя акция медицинской клиники «Амариллис»"
+              />
+            </div>
+            <div className="promotion-content">
+              <p className="promotion-eyebrow">Осень — время скидок 🍁</p>
+              <h2 id="orange-october-title" className="promotion-title">Оранжевый октябрь</h2>
+              <p className="promotion-dates">С 01 по 31 октября 2026 года</p>
+              <p className="promotion-offer">
+                <strong>4 массажа + 1 в подарок</strong>
+                <span>Предложение ограничено</span>
+              </p>
+              <p className="promotion-description">
+                Необходима предварительная запись по телефону.
+              </p>
+              <div className="promotion-buttons">
+                <button onClick={openAppointmentModal} className="btn promotion-appointment-button">
+                  Записаться на массаж
+                </button>
+                <a className="promotion-phone" href="tel:+74956576870">
+                  ☎️ 8 (495) 657-68-70
+                </a>
+              </div>
+              <p className="promotion-address">г. Москва, Волгоградский просп., 183, корп. 2</p>
             </div>
           </div>
         </div>
